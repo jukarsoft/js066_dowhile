@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta lang="es">
+	<meta name="description" content="Control HTML y CSS3"> 
+	<meta name="description" content="Free Web tutorials">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="Juan Carlos">
+	<title>bucle Do while y for</title>
+	<script type="text/javascript">
+		var numIntro;
+		var valorMax = 10;	
+		var valorMin = 1;
+		var continuar = true;
+
+		do {
+			numIntro=parseInt(prompt('introduce un  número entre 1 y 10 \n'));
+			if (isNaN(numIntro) || numIntro > valorMax || numIntro < valorMin) {
+				alert(`${numIntro} no es un número válido  \n`);
+			} else {
+					document.write(`tabla de multiplicar del ${numIntro} <br>`);
+					for (i=0; i <= valorMax; i++) {
+						document.write(` ${numIntro}  X  ${i} = ${numIntro*i} <br>`);
+					} 
+			}
+			continuar=confirm(`¿quieres seguir con otra tabla? `);
+		}	while (continuar)
+	</script>
+</head>
+<body>
+
+</body>
+</html>
